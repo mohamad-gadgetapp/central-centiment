@@ -22,11 +22,15 @@ const Button = ({
             onClick={onClick}
             style={{
                 backgroundColor: color,
-                border,
+                border: "none",
+                borderRadius: 10,
                 height,
-                width
+                width,
+                color: "white",
+                letterSpacing: "4px",
+                fontSize: "20px",
+                fontFamily: "inter",
             }}
-            className="button-container"
         >
             {children}
         </button>
