@@ -7,15 +7,24 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import Login from "./pages/login";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import Header from "./common/Header";
+import Footer from "./common/Footer";
+import ThanksPage from "./common/ThanksPage";
 
 function App() {
   return (
     <div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Login />} />
-        </Routes>
-      </Router>
+      <Header />
+      <div>
+        <Router>
+          <Routes>
+            <Route path="/" element={<ThanksPage />} />
+          </Routes>
+        </Router>
+      </div>
+      <Footer />
     </div>
   );
 }

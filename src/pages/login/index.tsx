@@ -1,6 +1,6 @@
 import React from "react";
-import "./style.css"
-import { Form, Field } from 'react-final-form';
+import "./style.css";
+import { Form, Field } from "react-final-form";
 import Button from "../../common/Button";
 
 const Login = () => {
@@ -14,15 +14,15 @@ const Login = () => {
     border: "2px solid #164586",
     outline: "0px",
     backgroundColor: "#122A4B",
-    color: '#fff',
+    color: "#fff",
     letterSpacing: "4px",
-    fontFamily: 'Inter',
-    margin: "10px"
+    fontFamily: "Inter",
+    margin: "10px",
   };
 
   const handleChangeChk = () => {
-    setChecked(!checked)
-  }
+    setChecked(!checked);
+  };
 
   return (
     <div className="main-container">
@@ -34,14 +34,14 @@ const Login = () => {
           style={inputTextStyle}
           placeholder="USERNAME / EMAIL"
         />
-        <input
-          type="text"
-          style={inputTextStyle}
-          placeholder="PASSWORD"
-        />
+        <input type="text" style={inputTextStyle} placeholder="PASSWORD" />
         <div className="display-flex-container">
           <div className="check-box-container">
-            <input className="checkBox" type="checkbox" onChange={handleChangeChk} />
+            <input
+              className="checkBox"
+              type="checkbox"
+              onChange={handleChangeChk}
+            />
             <div className="textStyle">Stayed Signed In</div>
           </div>
           <div className="check-box-container">
@@ -49,7 +49,6 @@ const Login = () => {
           </div>
         </div>
         <Button
-
           height="200px"
           onClick={() => console.log("You clicked on the pink circle!")}
           width="200px"
