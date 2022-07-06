@@ -1,0 +1,11 @@
+.footermaindiv {
+  background-color: #1e3d6b;
+  color: #8e9eb5;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding: 2rem 0rem;
+}
