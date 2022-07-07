@@ -13,8 +13,8 @@ const Login = () => {
   const [checked, setChecked] = React.useState(true);
 
   const handleChangeChk = () => {
-    setChecked(!checked)
-  }
+    setChecked(!checked);
+  };
 
   return (
     <div className="main-container">
@@ -89,7 +89,6 @@ const Login = () => {
           <div className="text-container">
             Dont’t have an account? Sign up now!
           </div>
-
         </div>
       </Container>
     </div>

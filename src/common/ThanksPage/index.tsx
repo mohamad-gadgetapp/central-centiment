@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
+import Container from "react-bootstrap/Container";
 
 const ThanksPage = () => {
   const [message, setMessage] = useState(
@@ -7,10 +8,12 @@ const ThanksPage = () => {
   );
   return (
     <div className="thankspagemaindiv">
-      <div>
-        <div>THANK YOU</div>
-        <div>{message}</div>
-      </div>
+      <Container>
+        <div className="thankspagediv">
+          <div className="thankstextdiv">THANK YOU</div>
+          <div>{message}</div>
+        </div>
+      </Container>
     </div>
   );
 };
