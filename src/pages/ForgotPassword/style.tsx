@@ -10,7 +10,7 @@ export const inputTextStyle = {
     color: '#fff',
     letterSpacing: "4px",
     fontFamily: 'Inter',
-    margin: "10px"
+    marginTop: "20px"
 };
 
-export const disStyle = { marginTop: 25, justifyContent: 'center', display: 'flex', alignItems: 'center' };
+export const disStyle = { marginTop: 50, justifyContent: 'center', display: 'flex', alignItems: 'center' };

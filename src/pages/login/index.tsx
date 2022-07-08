@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css"
+import { useNavigate } from "react-router-dom"
 import Button from "../../common/Button";
 import { colors } from '../../common/color';
 import SocialButton from "../../common/SocialBtn";
@@ -10,7 +11,13 @@ import Container from "react-bootstrap/Container";
 import { inputTextStyle, disStyle } from "./style";
 
 const Login = () => {
+
   const [checked, setChecked] = React.useState(true);
+  let navigate = useNavigate();
+
+  const navigateForgotPassword = () => {
+    navigate('/forgot-password');
+  }
 
   const handleChangeChk = () => {
     setChecked(!checked);
@@ -38,7 +45,7 @@ const Login = () => {
               <div className="textStyle">Stayed Signed In</div>
             </div>
             <div className="check-box-container">
-              <div className="textStyleForgot">Forgot Password?</div>
+              <div className="textStyleForgot" onClick={() => navigateForgotPassword()}>Forgot Password?</div>
             </div>
           </div>
           <div style={disStyle}>

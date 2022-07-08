@@ -3,6 +3,7 @@
   padding-top: 0rem;
   padding-bottom: 0rem;
 }
+
 .logoimag {
   height: 8rem;
 }
@@ -10,19 +11,32 @@
 .headertextimg {
   height: 1rem;
 }
+
 .containerdiv {
   align-items: flex-end !important;
 }
+
 .headermainfulldiv {
-  width: 100vw;
+  width: 100%;
+  z-index: 99999;
+  position: -webkit-sticky;
   position: fixed;
+  top: 0px;
 }
+
+/* .sticky {
+  position: -webkit-sticky;
+  position: fixed;
+  top: 0px;
+} */
+
 .headertest {
   color: #fff !important;
   font-size: 0.8rem !important;
   padding-right: 1rem !important;
   padding-left: 1rem I !important;
 }
+
 .headeruppermaindiv {
   background-color: #0b1f38;
   align-items: center;
@@ -32,16 +46,19 @@
   font-size: 0.8rem;
   padding: 0.5rem 0rem;
 }
+
 .headerloginbutton {
   padding-left: 1rem;
   padding-right: 1rem;
   cursor: pointer;
 }
+
 .headersingupbutton {
   padding-left: 1rem;
   padding-right: 1rem;
   cursor: pointer;
 }
+
 @media (max-width: 992px) {
   .containerdiv {
     align-items: center !important;
@@ -52,6 +69,7 @@
   .containerdiv {
     align-items: center !important;
   }
+
   .headertextimg {
     display: none;
   }

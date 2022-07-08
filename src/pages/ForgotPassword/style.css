@@ -1,0 +1,35 @@
+.main-container {
+    padding: 15px;
+    background-color: #0B1F38;
+    min-height: 100vh;
+}
+
+.textHeaderStyle {
+    font-family: 'Inter';
+    font-size: 4.1rem;
+    letter-spacing: 10px;
+    color: #FFFFFF;
+}
+
+
+.wel-come-Style {
+    Font-family: 'Inter';
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-top: 25px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.back-to-login-container {
+    text-align: center;
+    color: var(--off-blue);
+    margin-top: 4rem;
+}

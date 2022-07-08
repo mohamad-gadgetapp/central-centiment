@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom"
 import "./style.css";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -9,12 +10,39 @@ import logo from "../../assets/logo.svg";
 import HeaderText from "../../assets/CENTRAL SENTIMENT.svg";
 
 const Header = () => {
+
+  let navigate = useNavigate();
+  // var header: any = document.getElementById("myHeader");
+  // var sticky: number = header?.offsetTop;
+
+  // function myFunction() {
+  //   if (window.pageYOffset > sticky) {
+  //     header?.classList.add("sticky");
+  //   } else {
+  //     header?.classList.remove("sticky");
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   myFunction();
+  // }, [])
+
+  const navigateSignUp = () => {
+    navigate('/sign-up');
+  }
+
+  const navigateLogin = () => {
+    navigate('/login');
+  }
+
   return (
     <div>
-      <div className="headermainfulldiv">
+      <div className="headermainfulldiv" id="myHeader">
         <div className="headeruppermaindiv">
-          <div className="headersingupbutton">SING UP</div>
-          <div className="headerloginbutton">LOGIN</div>
+          <div className="headersingupbutton" onClick={() => navigateSignUp()}>
+            SIGN UP
+          </div>
+          <div className="headerloginbutton" onClick={() => navigateLogin()}>LOGIN</div>
         </div>
         <div>
           <Navbar
