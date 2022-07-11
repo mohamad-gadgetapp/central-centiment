@@ -1,23 +1,317 @@
 @media only screen and (max-width: 640px) {
 
-    .data-main-div {
-        margin-top: 2rem;
+    .mid-div {
+        flex-wrap: wrap-reverse;
+    }
+
+    .left-part-div {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .meter-div {
+        height: 200px;
+        width: 300px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .right-part-div {
+        width: 100%;
+    }
+
+    .search-div {
+        height: 1.75rem;
+        width: fit-content;
+        padding-right: 0.25rem;
+    }
+
+    .text-extreme-fear {
+        Font-family: 'Inter';
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #FF7070;
+    }
+
+    .search-icon {
+        height: 2.5vh;
+        width: 2.5vw;
+    }
+
+    .data-main-div {
         overflow-x: scroll;
         overflow-y: hidden;
         white-space: nowrap;
+    }
+
+    .title-table {
+        width: 800px;
+    }
+
+    .title-row {
+        font-size: 0.65rem;
+        font-weight: 500;
+    }
+
+    .title-row-data {
+        height: 9vh;
+    }
+
+    .table-data-hash {
+        width: 5%;
+        padding-left: 1rem;
+    }
+
+    .table-data-crypto {
+        width: 10%;
+    }
+
+    .table-data-sentiment {
+        width: 10%;
+    }
+
+    .table-data-hours {
+        width: 10%;
+    }
+
+    .table-data-days {
+        width: 10%;
+    }
+
+    .table-data-marketCap {
+        width: 14%;
+    }
+
+    .table-data-volume {
+        width: 14%;
+    }
+
+    .table-data-circulatingSupply {
+        width: 13%;
+    }
+
+    .table-data-lastDaysSentiment {
+        width: 14%;
+    }
+
+    .up-down-arrow {
+        height: 0.7rem;
+        width: 0.7rem;
+    }
+
+
+    .meter-data {
+        height: 60px;
+        width: 90px;
     }
 }
 
 
 @media only screen and (min-width: 640px) {
 
+    .mid-div {
+        justify-content: space-between;
+    }
+
+    .left-part-div {
+        width: 50%;
+        margin-top: 1rem;
+    }
+
+    .meter-div {
+        height: 200px;
+        width: 300px;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .right-part-div {
+        width: 50%;
+    }
+
+    .search-div {
+        height: 1.75rem;
+        width: fit-content;
+        padding-right: 0.3rem;
+    }
+
+    .text-div {
+        align-self: flex-start;
+        place-self: center;
+    }
+
+    .text-extreme-fear {
+        Font-family: 'Inter';
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #FF7070;
+    }
+
+    .search-icon {
+        height: 2vh;
+        width: 2vw;
+    }
+
     .data-main-div {
-        margin-top: 2rem;
-        width: 100%;
         overflow-x: scroll;
         overflow-y: hidden;
+    }
+
+    .title-row {
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+
+    .title-row-data {
+        height: 11vh;
+    }
+
+    .table-data-hash {
+        width: 5%;
+        padding-left: 1rem;
+    }
+
+    .table-data-crypto {
+        width: 10%;
+    }
+
+    .table-data-sentiment {
+        width: 10%;
+    }
+
+    .table-data-hours {
+        width: 10%;
+    }
+
+    .table-data-days {
+        width: 10%;
+    }
+
+    .table-data-marketCap {
+        width: 14%;
+    }
+
+    .table-data-volume {
+        width: 14%;
+    }
+
+    .table-data-circulatingSupply {
+        width: 13%;
+    }
+
+    .table-data-lastDaysSentiment {
+        width: 14%;
+    }
+
+    .up-down-arrow {
+        height: 0.8rem;
+        width: 0.8rem;
+    }
+
+    .meter-data {
+        height: 75px;
+        width: 100px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .mid-div {
+        justify-content: space-between;
+    }
+
+    .meter-div {
+        height: 250px;
+        width: 400px;
+    }
+
+    .right-part-div {
+        width: 50%;
+    }
+
+    .search-div {
+        height: 1.75rem;
+        width: fit-content;
+    }
+
+    .text-div {
+        align-self: flex-start;
+    }
+
+    .text-extreme-fear {
+        Font-family: 'Inter';
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #FF7070;
+    }
+
+    .data-main-div {
+        overflow-x: visible;
         white-space: nowrap;
+    }
+
+    .title-table {
+        width: 100%;
+    }
+
+    .title-row {
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+
+    .title-row-data {
+        height: 12vh;
+    }
+
+    .table-data-hash {
+        width: 5%;
+        padding-left: 1rem;
+    }
+
+    .table-data-crypto {
+        width: 10%;
+    }
+
+    .table-data-sentiment {
+        width: 10%;
+    }
+
+    .table-data-hours {
+        width: 10%;
+    }
+
+    .table-data-days {
+        width: 10%;
+    }
+
+    .table-data-marketCap {
+        width: 14%;
+    }
+
+    .table-data-volume {
+        width: 14%;
+    }
+
+    .table-data-circulatingSupply {
+        width: 13%;
+    }
+
+    .table-data-lastDaysSentiment {
+        width: 14%;
+    }
+
+    .up-down-arrow {
+        height: 1rem;
+        width: 1rem;
+    }
+
+    .meter-data {
+        height: 85px;
+        width: 120px;
     }
 }
 
@@ -28,17 +322,15 @@
     padding-top: 0.75rem;
 }
 
-.textHeaderStyle {
+.mid-div {
     display: flex;
-    justify-content: space-between;
     padding: 0rem 1rem;
 }
 
 .left-part-div {
-    width: 50%;
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
+    margin-top: 1rem;
 }
 
 .wel-come-Style {
@@ -50,15 +342,10 @@
 }
 
 .meter-div {
-    height: 250px;
-    width: 400px;
     align-self: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
 }
 
 .right-part-div {
-    width: 50%;
     height: inherit;
     display: flex;
     flex-direction: column;
@@ -66,8 +353,6 @@
 }
 
 .search-div {
-    height: 1.75rem;
-    width: fit-content;
     color: white;
     border: 1px solid #5F7EAC;
     border-radius: 10px;
@@ -88,16 +373,6 @@
     font-style: italic;
 }
 
-.search-icon {
-    height: 2vh;
-    width: 2vw;
-}
-
-.text-div {
-    align-self: flex-start;
-    place-self: ce;
-}
-
 .text-extreme-fear {
     Font-family: 'Inter';
     font-size: 0.85rem;
@@ -107,12 +382,11 @@
 }
 
 .data-main-div {
-    margin-top: 2rem;
     width: 100%;
+    margin-top: 2rem;
 }
 
 .title-table {
-    width: 100%;
     color: white;
     background-color: rgba(30, 61, 107, 0.36);
 }
@@ -122,64 +396,10 @@
     border: 2px solid #164586;
     border-left: none;
     Font-family: 'Inter';
-    font-size: 0.85rem;
-    font-weight: 500;
+    /* font-size: 0.85rem;
+    font-weight: 500; */
 }
 
 .title-row-data {
-    width: 100%;
-    border: 2px solid #164586;
-    border-left: none;
     border-right: none;
-    Font-family: 'Inter';
-    font-size: 0.85rem;
-    font-weight: 500;
-    height: 12vh;
-}
-
-.table-data-hash {
-    width: 5%;
-    padding-left: 1rem;
-}
-
-.table-data-crypto {
-    width: 10%;
-}
-
-.table-data-sentiment {
-    width: 10%;
-}
-
-.table-data-hours {
-    width: 10%;
-}
-
-.table-data-days {
-    width: 10%;
-}
-
-.table-data-marketCap {
-    width: 14%;
-}
-
-.table-data-volume {
-    width: 14%;
-}
-
-.table-data-circulatingSupply {
-    width: 13%;
-}
-
-.table-data-lastDaysSentiment {
-    width: 14%;
-}
-
-.up-down-arrow {
-    height: 1rem;
-    width: 1rem;
-}
-
-.meter-data {
-    height: 85px;
-    width: 120px;
 }

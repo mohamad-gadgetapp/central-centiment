@@ -96,8 +96,7 @@ const MainScreen = () => {
 
     return (
         <div className="main-container">
-            {/* <Container> */}
-            <div className="textHeaderStyle">
+            <div className="mid-div">
                 <div className="left-part-div">
                     <span className="wel-come-Style">Your Central Sentiment Index for Today:</span>
                     <div className='meter-div'>
@@ -125,7 +124,7 @@ const MainScreen = () => {
                     <div className='search-div'>
                         <input type="text" placeholder="Search Crypto Currency" />
                         <svg className="search-icon" data-darkreader-inline-stroke="" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
                     </div>
                     <div className='text-div'>
@@ -137,130 +136,108 @@ const MainScreen = () => {
             </div>
             <div className="data-main-div">
                 <table className="title-table">
-                    <tr className="title-row">
-                        <td className="table-data-hash">
-                            #
-                        </td>
-                        <td
-                            className="table-data-crypto"
-                        >
-                            <span>Crypto</span>
-                        </td>
-                        <td
-                            className="table-data-sentiment"
-                        >
-                            <span>Sentiment</span>
-                        </td>
-                        <td
-                            className="table-data-hours"
-                        >
-                            <span>24h%</span>
-                        </td>
-                        <td
-                            className="table-data-days"
-                        >
-                            7d%
-                        </td>
-                        <td className="table-data-marketCap">
-                            Market Cap
-                        </td>
-                        <td className="table-data-volume">
-                            Volume <br />(24h)
-                        </td>
-                        <td className="table-data-circulatingSupply">
-                            Circulating Supply
-                        </td>
-                        <td className="table-data-lastDaysSentiment">
-                            Last 7 Days Sentiment
-                        </td>
-                    </tr>
-                    {list.map((item, index) => {
-                        return (
-                            <tr className="title-row-data" key={index}>
-                                <td className="table-data-hash">
-                                    {item.hash}
-                                </td>
-                                <td
-                                    className="table-data-crypto"
-                                >
-                                    <span>{item.crypto}</span><br />
-                                    <span style={{ color: '#C6C1C1' }}>{item.cryptoType}</span>
-                                </td>
-                                <td
-                                    className="table-data-sentiment"
-                                >
-                                    {item.sentiment >= 50 && item.sentiment <= 100 ? <span style={{ color: '#A73320' }}>{item.sentiment}</span> : <span style={{ color: '#2BA720' }}>{item.sentiment}</span>}
+                    <tbody>
+                        <tr className="title-row">
+                            <td className="table-data-hash">
+                                #
+                            </td>
+                            <td
+                                className="table-data-crypto"
+                            >
+                                <span>Crypto</span>
+                            </td>
+                            <td
+                                className="table-data-sentiment"
+                            >
+                                <span>Sentiment</span>
+                            </td>
+                            <td
+                                className="table-data-hours"
+                            >
+                                <span>24h%</span>
+                            </td>
+                            <td
+                                className="table-data-days"
+                            >
+                                7d%
+                            </td>
+                            <td className="table-data-marketCap">
+                                Market Cap
+                            </td>
+                            <td className="table-data-volume">
+                                Volume <br />(24h)
+                            </td>
+                            <td className="table-data-circulatingSupply">
+                                Circulating Supply
+                            </td>
+                            <td className="table-data-lastDaysSentiment">
+                                Last 7 Days Sentiment
+                            </td>
+                        </tr>
+                        {list.map((item, index) => {
+                            return (
+                                <tr className="title-row-data title-row" key={index}>
+                                    <td className="table-data-hash">
+                                        {item.hash}
+                                    </td>
+                                    <td
+                                        className="table-data-crypto"
+                                    >
+                                        <span>{item.crypto}</span><br />
+                                        <span style={{ color: '#C6C1C1' }}>{item.cryptoType}</span>
+                                    </td>
+                                    <td
+                                        className="table-data-sentiment"
+                                    >
+                                        {item.sentiment >= 50 && item.sentiment <= 100 ? <span style={{ color: '#A73320' }}>{item.sentiment}</span> : <span style={{ color: '#2BA720' }}>{item.sentiment}</span>}
 
-                                </td>
-                                <td
-                                    className="table-data-hours"
-                                >
-                                    {item.hours >= 0.5 && item.hours <= 1 ? <span style={{ color: '#1EEA57' }}>{item.hours}%&nbsp;<img className="up-down-arrow" src={upArrow} /></span> : <span style={{ color: '#EA1E1E' }}>{item.hours}%&nbsp;<img className="up-down-arrow" src={downArrow} /></span>}
-                                </td>
-                                <td
-                                    className="table-data-days"
-                                >
-                                    {item.days >= 0.5 && item.days <= 1 ? <span style={{ color: '#1EEA57' }}>{item.days}%&nbsp;<img className="up-down-arrow" src={upArrow} /></span> : <span style={{ color: '#EA1E1E' }}>{item.days}%&nbsp;<img className="up-down-arrow" src={downArrow} /></span>}
-                                </td>
-                                <td className="table-data-marketCap">
-                                    <span>${item.marketCap}</span>
-                                </td>
-                                <td className="table-data-volume">
-                                    <span>${item.volume}</span><br />
-                                    <span style={{ color: '#C6C1C1' }}>{item.qty}</span>
-                                </td>
-                                <td className="table-data-circulatingSupply">
-                                    <span>{item.circulatingSupply}</span>&nbsp;
-                                    <span>{item.cryptoType}</span>
-                                </td>
-                                <td className="table-data-lastDaysSentiment">
-                                    <div className="meter-data">
-                                        <ReactSpeedometer
-                                            fluidWidth={true}
-                                            minValue={0}
-                                            maxValue={100}
-                                            value={item.sentiment}
-                                            segments={2}
-                                            segmentColors={[
-                                                "#A73320",
-                                                "#13DA4B",
-                                                "#4BAA6B"
-                                            ]}
-                                            needleHeightRatio={0.7}
-                                            ringWidth={10}
-                                            needleColor="#C6C1C1"
-                                        />
-                                    </div>
-                                </td>
-                            </tr>
-                        );
-                    })}
+                                    </td>
+                                    <td
+                                        className="table-data-hours"
+                                    >
+                                        {item.hours >= 0.5 && item.hours <= 1 ? <span style={{ color: '#1EEA57' }}>{item.hours}%&nbsp;<img className="up-down-arrow" src={upArrow} /></span> : <span style={{ color: '#EA1E1E' }}>{item.hours}%&nbsp;<img className="up-down-arrow" src={downArrow} /></span>}
+                                    </td>
+                                    <td
+                                        className="table-data-days"
+                                    >
+                                        {item.days >= 0.5 && item.days <= 1 ? <span style={{ color: '#1EEA57' }}>{item.days}%&nbsp;<img className="up-down-arrow" src={upArrow} /></span> : <span style={{ color: '#EA1E1E' }}>{item.days}%&nbsp;<img className="up-down-arrow" src={downArrow} /></span>}
+                                    </td>
+                                    <td className="table-data-marketCap">
+                                        <span>${item.marketCap}</span>
+                                    </td>
+                                    <td className="table-data-volume">
+                                        <span>${item.volume}</span><br />
+                                        <span style={{ color: '#C6C1C1' }}>{item.qty}</span>
+                                    </td>
+                                    <td className="table-data-circulatingSupply">
+                                        <span>{item.circulatingSupply}</span>&nbsp;
+                                        <span>{item.cryptoType}</span>
+                                    </td>
+                                    <td className="table-data-lastDaysSentiment">
+                                        <div className="meter-data">
+                                            <ReactSpeedometer
+                                                fluidWidth={true}
+                                                minValue={0}
+                                                maxValue={100}
+                                                value={item.sentiment}
+                                                segments={2}
+                                                segmentColors={[
+                                                    "#A73320",
+                                                    "#13DA4B",
+                                                    "#4BAA6B"
+                                                ]}
+                                                needleHeightRatio={0.7}
+                                                ringWidth={10}
+                                                needleColor="#C6C1C1"
+                                            />
+                                        </div>
+                                    </td>
+                                </tr>
+                            );
+                        })}
+                    </tbody>
                 </table>
-
-                {/* <table>
-                    {list.map((item, index) => {
-                        return (
-                            <tr className="dataDivMerchants" key={index}>
-                                <td className="dataProfilePicDivMerchants filterTxtSizeMerchants">
-
-                                </td>
-                                <td className="dataOwnerNameDivMerchants filterTxtSizeMerchants dataTextCenterMerchants">
-                                </td>
-                                <td className="dataBusinessNameDivMerchants filterTxtSizeMerchants dataTextCenterMerchants">
-                                </td>
-                                <td className="dataEmailDivMerchants filterTxtSizeMerchants dataTextCenterMerchants">
-                                </td>
-                                <td className="dataStatusDivMerchants filterTxtSizeMerchants dataTextCenterMerchants">
-                                </td>
-                                <td className="dataActionsDivMerchants filterTxtSizeMerchants dataTextCenterMerchants">
-
-                                </td>
-                            </tr>
-                        );
-                    })}
-                </table> */}
             </div>
-            {/* </Container> */}
         </div>
     );
 };
