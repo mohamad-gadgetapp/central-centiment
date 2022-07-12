@@ -16,25 +16,21 @@ const ForgotPassword = () => {
         <div className="main-container">
             <Container>
                 <div className="textHeaderStyle">FORGOT PASSWORD</div>
-                <div className="wel-come-Style">NO WORRIES! <br />
+                <div className="wel-come-style">NO WORRIES! <br />
                     Enter your email address and we will send you the further instructions.</div>
                 <div className="heroContainer">
                     <input
                         type="text"
-                        style={inputTextStyle}
+                        className="inputTextStyle"
                         placeholder="Enter your Email"
                     />
                     <div className="back-to-login-container">
                         Back to Login
                     </div>
-                    <div style={disStyle}>
-                        <Button
-                            color={colors.btnColorSignUp}
-                            height="50px"
+                    <div className="button-div">
+                        <button
                             onClick={() => console.log("You clicked on the pink circle!")}
-                            width="400px"
-                            children="Submit"
-                        />
+                            className="button">Create Account</button>
                     </div>
                 </div>
             </Container>

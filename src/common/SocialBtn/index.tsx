@@ -3,9 +3,11 @@ import React from 'react'
 
 interface SocialButtonProps {
     children?: React.ReactNode;
-    height: string;
+    // height: string;
     onClick: () => void;
-    width?: string;
+    // width?: string;
+    socialBtn?: string;
+    // fontSizeClass?: string;
     img_url?: string;
 }
 
@@ -13,33 +15,33 @@ interface SocialButtonProps {
 
 const SocialButton = ({
     children,
-    height,
     onClick,
-    width,
+    socialBtn,
     img_url
 }: SocialButtonProps) => {
     return (
         <button
+            className={socialBtn}
             onClick={onClick}
-            style={{
-                backgroundColor: 'white',
-                border: "none",
-                borderRadius: 5,
-                height,
-                width,
-                letterSpacing: "4px",
-                fontSize: "14px",
-                fontFamily: "inter",
-                color: "#2F64B4"
-            }}
+        // style={{
+        //     backgroundColor: 'white',
+        //     border: "none",
+        //     borderRadius: 5,
+        //     height,
+        //     width,
+        //     letterSpacing: "4px",
+        //     fontFamily: "inter",
+        //     color: "#2F64B4"
+        // }}
         >
-            <div style={{ display: 'flex' }}>
-                <div style={{ marginLeft: "10px", display: 'flex', alignItems: 'center' }}>
-                    <img style={{ height: "25px", width: "25px" }} src={img_url} />
+            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <img style={{ height: "1.95rem", width: "1.95rem" }} src={img_url} />
                 </div>
-                <div style={{ marginLeft: "25px", display: 'flex', alignItems: 'center' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
                     {children}
                 </div>
+                <div></div>
             </div>
 
         </button>

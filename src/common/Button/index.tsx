@@ -15,7 +15,6 @@ const Button = ({
     children,
     height,
     onClick,
-    width
 }: ButtonProps) => {
     return (
         <button
@@ -25,7 +24,6 @@ const Button = ({
                 border: "none",
                 borderRadius: 10,
                 height,
-                width,
                 color: "white",
                 letterSpacing: "4px",
                 fontSize: "20px",

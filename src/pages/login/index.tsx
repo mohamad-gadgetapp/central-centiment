@@ -27,66 +27,52 @@ const Login = () => {
     <div className="main-container">
       <Container>
         <div className="textHeaderStyle">SIGN IN</div>
-        <div className="wel-come-Style">WELCOME BACK</div>
+        <div className="wel-come-style">WELCOME BACK</div>
         <div className="heroContainer">
           <input
             type="text"
-            style={inputTextStyle}
+            className="inputTextStyle"
             placeholder="USERNAME / EMAIL"
           />
           <input
             type="text"
-            style={inputTextStyle}
+            className="inputTextStyle"
             placeholder="PASSWORD"
           />
           <div className="display-flex-container">
             <div className="check-box-container">
               <input className="checkBox" type="checkbox" onChange={handleChangeChk} />
-              <div className="textStyle">Stayed Signed In</div>
-            </div>
-            <div className="check-box-container">
-              <div className="textStyleForgot" onClick={() => navigateForgotPassword()}>Forgot Password?</div>
+              <div className="textStyle">Stayed Signed In&nbsp;<span className="textStyleForgot" onClick={() => navigateForgotPassword()}> Forgot Password?</span>
+              </div>
             </div>
           </div>
-          <div style={disStyle}>
-            <Button
-              color={colors.btnColor}
-              height="50px"
+          <div className="button-div">
+            <button
               onClick={() => console.log("You clicked on the pink circle!")}
-              width="400px"
-              children="Sign In"
-            />
+              className="button">Sign In</button>
           </div>
           <div className="or-container">
             <div className="line-container" />
-            <div>OR</div>
+            <span className="line-container-or">OR</span>
             <div className="line-container" />
           </div>
-          <div className="social-container">
-            <div style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              height: "150px",
-            }}>
+          <div className="social-container-log-in">
+            <div className="social-container-log-in-sub-div" >
               <SocialButton
-                height="40px"
+                socialBtn="socialBtnLogIn button-font-size"
                 onClick={() => console.log("You clicked on the facebook!")}
-                width="350px"
                 children="Log with FaceBook"
                 img_url={fbIcon}
               />
               <SocialButton
-                height="40px"
+                socialBtn="socialBtnLogIn button-font-size"
                 onClick={() => console.log("You clicked on the google!")}
-                width="350px"
                 children="Log with Google"
                 img_url={googleIcon}
               />
               <SocialButton
-                height="40px"
+                socialBtn="socialBtnLogIn button-font-size"
                 onClick={() => console.log("You clicked on the We chat!")}
-                width="350px"
                 children="Log with We Chat"
                 img_url={weChatIcon}
               />
