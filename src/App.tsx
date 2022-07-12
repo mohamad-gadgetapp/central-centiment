@@ -10,7 +10,6 @@ import SignUp from "./pages/SignUp";
 import ForgotPassword from "./pages/ForgotPassword";
 import MainScreen from "./pages/MainScreen";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import Header from "./common/Header";
 import Footer from "./common/Footer";
 import ThanksPage from "./common/ThanksPage";
@@ -20,7 +19,7 @@ function App() {
     <Router>
       <div style={{ width: '100%' }}>
         <Header />
-        <div style={{ paddingTop: '10.5rem', width: '100%' }}>
+        <div className="bodyClass">
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/sign-up" element={<SignUp />} />

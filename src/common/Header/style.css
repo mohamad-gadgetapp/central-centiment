@@ -4,10 +4,6 @@
   padding-bottom: 0rem;
 }
 
-.logoimag {
-  height: 8rem;
-}
-
 .headertextimg {
   height: 1rem;
 }
@@ -57,6 +53,24 @@
   padding-left: 1rem;
   padding-right: 1rem;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+  .logoimag {
+    height: 8rem;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .logoimag {
+    height: 7rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .logoimag {
+    height: 5rem;
+  }
 }
 
 @media (max-width: 992px) {

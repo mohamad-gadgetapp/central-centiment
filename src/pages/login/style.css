@@ -20,12 +20,12 @@
     .display-flex-container {
         margin-top: 20px;
         width: 100%;
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
 
     .checkBox {
-        height: 25px;
-        width: 25px;
+        height: 20px;
+        width: 20px;
         margin: 0;
     }
 
@@ -35,7 +35,7 @@
     }
 
     .text-container {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
 
     .socialBtnLogIn {
@@ -264,4 +264,8 @@
     align-items: center;
     color: var(--btn-color);
     margin-top: 25px
+}
+
+.text-container:hover {
+    cursor: pointer;
 }

@@ -130,6 +130,10 @@
     color: var(--off-blue);
 }
 
+.back-to-login-container:hover {
+    cursor: pointer;
+}
+
 .button-div {
     margin-top: 1.5rem;
     justify-content: center;
