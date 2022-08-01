@@ -159,6 +159,7 @@
 
 .textHeaderStyle {
     font-family: 'Inter';
+    font-weight: 200;
     letter-spacing: 10px;
     color: #FFFFFF;
 }
