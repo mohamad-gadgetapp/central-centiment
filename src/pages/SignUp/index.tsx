@@ -19,7 +19,8 @@ const SignUp = () => {
       username !== "" &&
       email !== "" &&
       password !== "" &&
-      mobileNumber !== ""
+      mobileNumber !== "" &&
+      mobileNumber !== NaN
     ) {
       setValidationStatus(true);
     } else {
@@ -28,8 +29,9 @@ const SignUp = () => {
   };
 
   useEffect(() => {
+    console.log("mob: ", mobileNumber);
     validation();
-  }, [username, password, mobileNumber]);
+  }, [username, email, password, mobileNumber]);
 
   const handleChangeChk = () => {
     setChecked(!checked);
@@ -72,7 +74,7 @@ const SignUp = () => {
               type="number"
               className="inputTextStyleNumber"
               placeholder="MOBILE NO."
-              onChange={(e) => setMobileNumber(parseInt(e.target.value))}
+              onChange={(e: any) => setMobileNumber(e.target.value)}
             />
           </div>
           <div className="display-flex-container">

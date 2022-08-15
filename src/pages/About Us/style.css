@@ -1,0 +1,133 @@
+@media only screen and (max-width: 640px) {
+
+    .textHeaderStyle {
+        font-size: 2.5rem;
+    }
+
+    .wel-come-style {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .follow-us-div {
+        font-size: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .fb-insta-div {
+        width: 75%;
+        margin-bottom: 1.5rem;
+    }
+
+    .social-id-span {
+        width: 75%;
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 640px) {
+
+    .textHeaderStyle {
+        font-size: 3rem;
+    }
+
+    .wel-come-style {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+    }
+
+    .follow-us-div {
+        font-size: 1.8rem;
+        margin: 2.5rem 0;
+    }
+
+    .fb-insta-div {
+        width: 55%;
+        margin-bottom: 1.5rem;
+    }
+
+    .social-id-span {
+        width: 80%;
+        font-size: 1.25rem;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .textHeaderStyle {
+        font-size: 4.1rem;
+    }
+
+    .wel-come-style {
+        font-size: 1.5rem;
+        margin-top: 1.75rem;
+    }
+
+    .follow-us-div {
+        font-size: 2.46rem;
+        margin: 3rem 0;
+    }
+
+    .fb-insta-div {
+        width: 40%;
+    }
+
+    .social-style-img {
+    }
+
+    .social-id-span {
+        width: 80%;
+        font-size: 1.5rem;
+    }
+
+}
+
+.main-container {
+    font-family: 'Inter';
+    padding: 15px;
+    background-color: #0B1F38;
+    min-height: 100vh;
+}
+
+.textHeaderStyle {
+    font-weight: 200;
+    letter-spacing: 10px;
+    color: #FFFFFF;
+}
+
+.wel-come-style {
+    font-weight: 200;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+.follow-us-div {
+    letter-spacing: 0.2rem;
+    color: #FFFFFF;
+    font-weight: 200;
+}
+
+.social-container-about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fb-insta-div {
+    display: flex;
+    justify-content: space-around;
+    color: #FFFFFF;
+}
+
+.social-style-img {
+    height: 1.95rem;
+    width: 1.95rem;
+    cursor: pointer;
+}
+
+.social-id-span {
+    font-weight: 700;
+    cursor: pointer;
+}

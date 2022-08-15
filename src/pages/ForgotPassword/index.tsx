@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import Container from "react-bootstrap/Container";
 import { useNavigate } from "react-router-dom";
 
 const ForgotPassword = () => {
   const [checked, setChecked] = React.useState(true);
+  const [email, setEmail] = useState("");
+  const [validationStatus, setValidationStatus] = useState(false);
+
   let navigate = useNavigate();
 
   const handleChangeChk = () => {
@@ -14,6 +17,18 @@ const ForgotPassword = () => {
   const navigateTo = (path: string) => {
     navigate(`/${path}`);
   };
+
+  const validation = () => {
+    if (email !== "") {
+      setValidationStatus(true);
+    } else {
+      setValidationStatus(false);
+    }
+  };
+
+  useEffect(() => {
+    validation();
+  }, [email]);
 
   return (
     <div className="main-container">
@@ -29,6 +44,7 @@ const ForgotPassword = () => {
             type="text"
             className="inputTextStyle"
             placeholder="Enter your Email"
+            onChange={(e) => setEmail(e.target.value)}
           />
           <div
             className="back-to-login-container"
@@ -40,6 +56,9 @@ const ForgotPassword = () => {
             <button
               onClick={() => console.log("You clicked on the pink circle!")}
               className="button"
+              style={{
+                backgroundColor: validationStatus ? "#2F64B4" : "#898989",
+              }}
             >
               Create Account
             </button>
